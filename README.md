@@ -10,7 +10,6 @@ With **BarterNet**, users can track transactions and delivery statuses in real-t
 By centralizing operations and automating workflows, BarterNet reduces operational costs, minimizes waste, and creates a scalable, secure ecosystem for B2B bartering. Join BarterNet today and experience the future of efficient, trustworthy business exchanges.
   
 ---
----
 ### Have a concise look-
 
 BarterNet is a cutting-edge web-based platform designed to transform the way wholesalers and retailers exchange goods and services. Built on the robust MERN stack, BarterNet eliminates the inefficiencies of traditional bartering by automating partner matching, inventory management, and logistics coordination. Our platform empowers businesses to trade smarter, reduce waste, and unlock new opportunities—all without the need for monetary transactions.
@@ -36,4 +35,75 @@ Join over 1,000 businesses already trading smarter with BarterNet. Whether you'r
 ---
 
 **Together, let’s build a smarter, sustainable way to trade.**  
+
+---
+
+### **Folder Structure**
+
+```
+barternet/
+├── backend/
+│   ├── config/
+│   │   └── db.js                # MongoDB connection setup
+│   ├── controllers/
+│   │   ├── authController.js    # Authentication logic (login, register)
+│   │   ├── productController.js # Product-related logic
+│   │   ├── chatController.js    # Chat-related logic
+│   │   └── transactionController.js # Transaction logic
+│   ├── middleware/
+│   │   ├── authMiddleware.js    # JWT authentication middleware
+│   │   └── errorMiddleware.js   # Global error handling
+│   ├── models/
+│   │   ├── User.js              # User schema
+│   │   ├── Product.js           # Product schema
+│   │   ├── Chat.js              # Chat schema
+│   │   └── Transaction.js       # Transaction schema
+│   ├── routes/
+│   │   ├── authRoutes.js        # Authentication routes
+│   │   ├── productRoutes.js     # Product routes
+│   │   ├── chatRoutes.js        # Chat routes
+│   │   └── transactionRoutes.js # Transaction routes
+│   ├── utils/
+│   │   ├── generateToken.js     # JWT token generation
+│   │   └── matchAlgorithm.js    # AI matching algorithm
+│   ├── .env                     # Environment variables
+│   └── index.js                 # Main server file
+│
+├── frontend/
+│   ├── public/                  # Static assets (images, icons, etc.)
+│   ├── src/
+│   │   ├── assets/              # Local assets (logos, images, etc.)
+│   │   ├── components/          # Reusable UI components
+│   │   │   ├── Navbar.jsx       # Navigation bar
+│   │   │   ├── Footer.jsx       # Footer
+│   │   │   ├── ProductCard.jsx  # Product card component
+│   │   │   └── ChatBox.jsx      # Chat box component
+│   │   ├── context/             # React context for state management
+│   │   │   └── AuthContext.jsx  # Authentication context
+│   │   ├── hooks/               # Custom React hooks
+│   │   │   └── useAuth.jsx      # Authentication hook
+│   │   ├── pages/               # Application pages
+│   │   │   ├── Home.jsx         # Home page
+│   │   │   ├── Login.jsx        # Login page
+│   │   │   ├── Register.jsx     # Registration page
+│   │   │   ├── Dashboard.jsx    # User dashboard
+│   │   │   ├── Products.jsx     # Product listing page
+│   │   │   ├── Chat.jsx         # Chat page
+│   │   │   └── Transactions.jsx # Transaction history page
+│   │   ├── services/            # API service functions
+│   │   │   ├── authService.js   # Authentication API calls
+│   │   │   ├── productService.js # Product API calls
+│   │   │   └── chatService.js   # Chat API calls
+│   │   ├── App.jsx              # Main application component
+│   │   ├── main.jsx             # Entry point
+│   │   └── index.css            # Global styles (Tailwind CSS)
+│   ├── .env                     # Frontend environment variables
+│   └── vite.config.js           # Vite configuration
+│   
+├── .gitignore                   # Files/folders to ignore in Git
+├── README.md                    # Project documentation
+└── package.json                 # Root package.json (optional for monorepo setup)
+```
+
+---
 

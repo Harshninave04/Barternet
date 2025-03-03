@@ -1,12 +1,3 @@
-
-
-function App() {
-
-  return (
-    <>
-      <h1 class="text-3xl font-bold underline">Barternet!</h1>
-    </>
-  );
+export default function App() {
+  return <h1 className="text-3xl font-bold underline text-center mt-8">Welcome to BarterNet!</h1>;
 }
-
-export default App

@@ -13,12 +13,16 @@ const Navbar = () => {
         <div className="flex items-center space-x-4">
           {user ? (
             <>
-              <Link to="/dashboard" className="hover:text-blue-200">
-                Dashboard
-              </Link>
-              <button onClick={logout} className="bg-red-500 px-4 py-2 rounded hover:bg-red-600">
-                Logout
-              </button>
+              <div className="flex items-center space-x-4">
+                <span className="hidden sm:inline">Welcome, {user.name}!</span>
+                <span className="hidden sm:inline">({user.role})</span>
+                <Link to="/dashboard" className="hover:text-blue-200">
+                  Dashboard
+                </Link>
+                <button onClick={logout} className="bg-red-500 px-4 py-2 rounded hover:bg-red-600">
+                  Logout
+                </button>
+              </div>
             </>
           ) : (
             <>

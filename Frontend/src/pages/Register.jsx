@@ -13,10 +13,15 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await register({ name, email, password, role });
+      await register({
+        name,
+        email,
+        password,
+        role: role.toLowerCase(), // Ensure role is lowercase
+      });
       navigate('/dashboard');
     } catch (error) {
-      console.error('Registration failed:', error);
+      console.error('Registration failed:', error.response?.data || error.message);
     }
   };
 

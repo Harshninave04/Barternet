@@ -6,7 +6,7 @@ const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [role, setRole] = useState('wholesaler');
+  const [role, setRole] = useState('Wholesaler');
   const { register } = useAuth();
   const navigate = useNavigate();
 
@@ -60,8 +60,8 @@ const Register = () => {
             value={role}
             onChange={(e) => setRole(e.target.value)}
             className="w-full p-2 border rounded">
-            <option value="wholesaler">Wholesaler</option>
-            <option value="retailer">Retailer</option>
+            <option value="Wholesaler">Wholesaler</option>
+            <option value="Retailer">Retailer</option>
           </select>
         </div>
         <button type="submit" className="w-full bg-blue-500 text-white p-2 rounded">

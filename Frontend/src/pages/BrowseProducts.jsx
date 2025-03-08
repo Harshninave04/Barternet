@@ -155,11 +155,11 @@ const BrowseProducts = () => {
                       </div>
                       <span className="ml-2 text-sm text-gray-600">{product.wholesaler.name}</span>
                     </div>
-                    <Link
+                    {/* <Link
                       to={`/products/${product._id}`}
                       className="text-sm font-medium text-blue-600 hover:text-blue-800">
                       View Details →
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>

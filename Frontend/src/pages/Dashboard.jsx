@@ -45,7 +45,7 @@ const Dashboard = () => {
         <p className="text-gray-600 mb-4">
           Browse products from trusted wholesalers in our network.
         </p>
-        <Link to="/browse" className="text-blue-600 hover:text-blue-800 font-medium text-sm">
+        <Link to="/browse-products" className="text-blue-600 hover:text-blue-800 font-medium text-sm">
           Browse Products →
         </Link>
       </div>

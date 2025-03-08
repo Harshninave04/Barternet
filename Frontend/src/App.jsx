@@ -7,6 +7,8 @@ import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import Profile from './pages/Profile';
 import ProtectedRoute from './components/ProtectedRoute'; 
+import UploadProduct from './pages/UploadProduct';
+import BrowseProducts from './pages/BrowseProducts';
 
 const App = () => {
   return (
@@ -23,6 +25,8 @@ const App = () => {
           <Route element={<ProtectedRoute />}>
             <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/profile" element={<Profile />} />
+            <Route path="/upload-product" element={<UploadProduct />} />
+            <Route path="/browse-products" element={<BrowseProducts />} />
           </Route>
         </Routes>
       </Router>

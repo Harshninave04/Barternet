@@ -71,6 +71,16 @@ const Navbar = () => {
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Settings
                       </Link>
+                      <Link
+                        to="/upload-product"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Upload Product
+                      </Link>
+                      <Link
+                        to="/browse-products"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Browse Products
+                      </Link>
                       <button
                         onClick={logout}
                         className="w-full text-left block px-4 py-2 text-sm text-red-600 hover:bg-gray-100">

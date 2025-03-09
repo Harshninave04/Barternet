@@ -21,4 +21,19 @@ const protect = async (req, res, next) => {
   }
 };
 
-module.exports = { protect };
+const wholesalerOnly = (req, res, next) => {
+  if (req.user.role !== 'Wholesaler') {
+    return res.status(403).json({ message: 'Access denied. Wholesalers only.' });
+  }
+  next();
+};
+
+const retailerOnly = (req, res, next) => {
+  if (req.user.role !== 'Retailer') {
+    return res.status(403).json({ message: 'Access denied. Retailers only.' });
+  }
+  next();
+};
+
+module.exports = { protect, wholesalerOnly, retailerOnly };
+

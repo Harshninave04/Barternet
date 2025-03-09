@@ -61,15 +61,15 @@ const Navbar = () => {
                   {/* Dropdown Menu */}
                   <div className="origin-top-right absolute right-0 mt-1 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 hidden group-hover:block">
                     <div className="py-1">
-                      <Link
+                      {/* <Link
                         to="/profile"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Your Profile
-                      </Link>
+                      </Link> */}
                       <Link
-                        to="/settings"
+                        to="/Profile"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Settings
+                        Update Profile
                       </Link>
                       <Link
                         to="/upload-product"
@@ -80,6 +80,11 @@ const Navbar = () => {
                         to="/browse-products"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Browse Products
+                      </Link>
+                      <Link
+                        to="/matched-products"
+                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                        Matched Products
                       </Link>
                       <button
                         onClick={logout}

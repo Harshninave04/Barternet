@@ -9,6 +9,7 @@ import Profile from './pages/Profile';
 import ProtectedRoute from './components/ProtectedRoute'; 
 import UploadProduct from './pages/UploadProduct';
 import BrowseProducts from './pages/BrowseProducts';
+import MatchedProducts from './pages/MatchedProducts';
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
             <Route path="/profile" element={<Profile />} />
             <Route path="/upload-product" element={<UploadProduct />} />
             <Route path="/browse-products" element={<BrowseProducts />} />
+            <Route path="/matched-products" element={<MatchedProducts />} />
           </Route>
         </Routes>
       </Router>

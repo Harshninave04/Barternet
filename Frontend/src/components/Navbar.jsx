@@ -71,20 +71,24 @@ const Navbar = () => {
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Update Profile
                       </Link>
-                      <Link
-                        to="/upload-product"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Upload Product
-                      </Link>
+                      {user?.role === 'Wholesaler' && (
+                        <Link
+                          to="/upload-product"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                          Upload Product
+                        </Link>
+                      )}
+                      {user?.role === 'Retailer' && (
+                        <Link
+                          to="/matched-products"
+                          className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+                          Matched Products
+                        </Link>
+                      )}
                       <Link
                         to="/browse-products"
                         className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
                         Browse Products
-                      </Link>
-                      <Link
-                        to="/matched-products"
-                        className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-                        Matched Products
                       </Link>
                       <button
                         onClick={logout}

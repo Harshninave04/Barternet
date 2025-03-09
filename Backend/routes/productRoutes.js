@@ -1,10 +1,10 @@
 const express = require('express');
-const router = express.Router();
-
-const { protect } = require('../middleware/authMiddleware');
+const { protect, wholesalerOnly } = require('../middleware/authMiddleware');
 const { uploadProduct, getProducts } = require('../controllers/productController');
 
-router.post('/upload', protect, uploadProduct);
+const router = express.Router();
+
+router.post('/upload', protect, wholesalerOnly, uploadProduct);
 router.get('/', getProducts);
 
 module.exports = router;

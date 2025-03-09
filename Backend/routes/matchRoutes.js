@@ -1,9 +1,9 @@
 const express = require('express');
-const { protect } = require('../middleware/authMiddleware');
+const { protect, retailerOnly } = require('../middleware/authMiddleware');
 const { matchProducts } = require('../controllers/matchController');
 
 const router = express.Router();
 
-router.get('/', protect, matchProducts);
+router.get('/', protect, retailerOnly, matchProducts);
 
 module.exports = router;

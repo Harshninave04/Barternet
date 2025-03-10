@@ -10,6 +10,7 @@ import ProtectedRoute from './components/ProtectedRoute';
 import UploadProduct from './pages/UploadProduct';
 import BrowseProducts from './pages/BrowseProducts';
 import MatchedProducts from './pages/MatchedProducts';
+import NotFound from './pages/NotFound';
 
 const App = () => {
   return (
@@ -35,6 +36,8 @@ const App = () => {
           <Route element={<ProtectedRoute role="Retailer" />}>
             <Route path="/matched-products" element={<MatchedProducts />} />
           </Route>
+
+          <Route path='*' element={<NotFound/>}></Route>
         </Routes>
       </Router>
     </AuthProvider>
